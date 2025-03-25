@@ -1,0 +1,197 @@
+/* Bruce Provencher */
+/* Zeppelin Gallery CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lightblue: #10c4d1;
+    --orange: #ee9971;
+    --white: #fff;
+    --black: #000;
+    --lightgrey: rgb(185, 180, 180);
+    --darkgrey: rgb(92, 84, 84);
+    --sepia: rgb(163, 96, 28);
+}
+
+body {
+    font-weight: bold;
+    color: var(--darkgrey);
+    font-size: 22px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-nav {
+    background-color: var(--lightblue);
+    width: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    flex: 1; /* Each item takes up equal space */
+}
+
+.main-nav a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.main-nav a:hover {
+    background-color: var(--darkgrey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Layout styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background-image: url('../media/lz127-profile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
+header h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--black);
+    background-color: rgba(148, 145, 141, 0.4);
+    margin: 10px;
+}
+
+main {
+    flex: 1; /* Take up remaining space */
+    margin: 5px;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: var(--lightblue);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+.container {    
+    flex-direction: column;
+    align-items: stretch;
+    display: grid;
+    background-color: #898585;
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.container .heading {
+    text-align: center;
+    padding-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0 0 0 0.2);
+    font-style: italic;
+}
+
+.container .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.container .box-container .box img {
+    height: 200px; /* Set a uniform height */
+    width: 100%;   /* Adjust to fill the container's width */
+    object-fit: cover; /* Ensure the image scales and crops proportionally */
+    border-radius: 5px; 
+}
+
+.container .box-container .box h3 {
+    color: #444;
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+.container .box-container .box p {
+    color: #4d4b4b;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.container .box-container .box {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: var(--lightgrey);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 8px 25px;
+    letter-spacing: 1px;
+}
+.container .box-container .box:hover {
+    box-shadow: 0 10px 15px rgba(0 0 0 0.3);
+    transform: scale(1.02, 1.02);
+}
+
+a:link {
+    color: var(--white);
+}
+
+a:visited {
+    color: var(--orange);
+}
+
+a:hover {
+    color: var(--darkgrey);
+}
+
+a:active {
+    color: var(--purple);
+}
+
+/* Media query for mobile view */
+@media (width < 768px) {
+    header {
+    height: 300px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+.main-nav {
+    margin-top: 10px;
+}
+
+.main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    padding: 1rem;
+}
+
+
+}

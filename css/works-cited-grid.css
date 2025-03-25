@@ -1,0 +1,183 @@
+/* Works Cited page using CSS Grid */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lightblue: #10c4d1;
+    --orange: #ee9971;
+    --white: #fff;
+    --black: #000;
+    --red: #f00;
+    --blue: #00f;
+    --green: rgb(68, 165, 68);
+    --lightgrey: rgb(185, 180, 180);
+    --darkgrey: rgb(92, 84, 84);
+    --sepia: rgb(163, 96, 28);
+    --purple: rgb(142, 28, 177);
+    
+}
+
+body {
+    font-weight: bold;
+    color: var(--darkgrey);
+    font-size: 22px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 10px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(350px, 1fr);
+    gap: 10px;
+}
+
+.citation {
+    background: white;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.citation p {
+    line-height: 2; 
+    margin: 0; 
+    text-indent: -1.5em; /* Negative indent for the first line */
+    padding-left: 1.5em; /* Indent for subsequent lines */
+}
+
+.citation a:link {
+    color: var(--blue);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 12pt;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0; 
+}
+
+h2 {
+    margin: 0 0 10px;
+}
+
+
+a:link, .citation a:link {
+    color: var(--blue);
+}
+
+a:visited, .citation a:visited {
+    color: var(--red);
+}
+
+a:hover, .citation a:hover {
+    color: var(--darkgrey);
+}
+
+a:active, .citation a:active {
+    color: var(--purple);
+}
+
+
+
+/* Navigation CSS */
+
+.main-nav {
+    background-color: var(--lightblue);
+    width: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    flex: 1; /* Each item takes up equal space */
+}
+
+.main-nav a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.main-nav a:hover {
+    background-color: var(--darkgrey);
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Layout styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background-image: url('../media/lz127-profile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
+header h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--black);
+    background-color: rgba(148, 145, 141, 0.4);
+    margin: 10px;
+}
+
+/* Media query for mobile view */
+@media (width < 768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    header {
+    height: 300px;
+}
+
+    header h1 {
+        font-size: 2.5rem;
+}
+
+    .main-nav {
+        margin-top: 10px;
+}
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+}
+
+    .main-nav li {
+        margin: 0;
+}
+
+    .main-nav a {
+        padding: 1rem;
+}
+
+    footer {
+        margin-top: 0;
+        font-size: 12pt;
+    }
+
+
+}

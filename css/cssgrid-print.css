@@ -1,0 +1,102 @@
+/* Bruce Provencher */
+/* 24 MAR 2025 */
+/* Lesson 11 / cssgrid-print.css */
+
+
+@media print{
+    *{
+        width: 100%;
+        font-size: 12pt;
+        font-family: sans-serif;
+        background: white;
+        color: black;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        display: block;
+        top: 0%;
+        height: auto;
+        border: none;
+        text-shadow: none;
+        border: none;
+        font-weight: normal;
+    }
+
+    .icon-bar, .icon-bar i {
+        display: none;
+    }
+
+    header, h1, h2, h3 {
+        font-family: sans-serif;
+        color: black;
+        font-size: 12pt;
+        text-align: left;
+        text-shadow: none;
+        background: none;
+    }
+
+    header h1 {
+        font-size: 12pt;
+        text-align: left;
+        color: var(--black);
+        background-color: transparent;
+        margin: 0;
+    }
+
+    .main-nav {
+        display:none;
+    }
+
+    .main-nav ul {
+        display:block;
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+
+    .main-nav ul li {
+        border: none;
+        margin: 0;
+        text-decoration: none;
+    }
+    
+
+    a:link,a:visited, a:hover, a:active { 
+        text-decoration:none;
+        color:black;
+        font-size:12pt;
+        text-align:left;
+        padding:0;
+        margin:0;
+    }
+
+    .box {
+        width:100%;
+        outline:none;
+    }
+
+    .box-container .box p {
+        font-weight: normal;
+    }
+
+    .citation {
+        background: #fff;
+        border: none;
+        font-size: 16px;
+        font-weight: normal;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .citation p {
+        line-height: 1.2; 
+        margin: 0; 
+        text-indent: 0;
+        padding-left: 0;
+    }
+
+    img, nav, script { 
+        display:none;
+    }
+}
