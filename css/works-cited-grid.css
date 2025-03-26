@@ -17,7 +17,6 @@
     --darkgrey: rgb(92, 84, 84);
     --sepia: rgb(163, 96, 28);
     --purple: rgb(142, 28, 177);
-    
 }
 
 body {
@@ -82,8 +81,6 @@ a:hover, .citation a:hover {
 a:active, .citation a:active {
     color: var(--purple);
 }
-
-
 
 /* Navigation CSS */
 
@@ -179,7 +176,6 @@ header h1 {
     }
 }
 
-
 /* Media query for mobile view */
 @media (width < 768px) {
 
@@ -215,6 +211,4 @@ header h1 {
     footer {
         margin-top: 0;
     }
-
-
 }
